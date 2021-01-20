@@ -105,7 +105,7 @@ dishRouter.route('/:dishId/comments')
 })
 
 .post(authenticate.verifyUser,(req,res,next)=>{
-    console.log("re.user",req.user);
+    console.log("req.user",req.user);
     Dishes.findById(req.params.dishId)
     .then((dish)=>{
         if(dish!=null){
