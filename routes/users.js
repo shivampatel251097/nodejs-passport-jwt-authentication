@@ -65,48 +65,6 @@ router.post('/login',passport.authenticate('local'),(req, res, next) =>{
   res.statusCode = 200;
   res.setHeader('Content-Type','application/json');
   res.json({success: true, token:token, status: 'Successfully Logged in'});
-//   if(!req.session.user){
-//     var authHeader =  req.headers.authorization;
-//     if(!authHeader){
-//       var err = new Error('You are not authorized!!');
-//       res.setHeader('WWW-Authenticate', 'Basic');
-//       err.status = 401;
-//       return next(err);
-//     }
-//   //storing onlt part username and password which is written in base64 then decoding it. 
-//     var auth = Buffer.from(authHeader.split(' ')[1], 'base64').toString('ascii').split(':');
-
-//     var username =  auth[0];
-//     var password =  auth[1];
-
-//     User.findOne({username:username})
-//     .then((user)=>{
-//       if(user === null){
-//         var err = new Error('User doesn\'t exist!!');
-//         res.setHeader('WWW-Authenticate', 'Basic');
-//         err.status = 401;
-//         return next(err);
-//       }
-//       else if(user.password != password){
-//         var err = new Error('Password is incorrect!!');
-//         res.setHeader('WWW-Authenticate', 'Basic');
-//         err.status = 401;
-//         return next(err);
-//       }
-//       else if(user.username === username && user.password === password){
-//         req.session.user = 'authenticated';
-//         res.statusCode = 200;
-//         res.setHeader('Content-Type','text/plan');
-//         res.end('You are authenticated!');
-//       }
-//     })
-//     .catch((err)=> next(err));
-// }
-// else{
-//   res.statusCode = 200;
-//   res.setHeader('Content-Type','text/plan');
-//   res.end('You are already authenticated!')
-// }
 });
 
 router.get('/logout',(req,res)=>{
