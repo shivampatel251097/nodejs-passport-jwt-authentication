@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-Parser');
 const mongoose = require('mongoose');
 const authenticate = require('../authenticate');
+//Cors
 const cors = require('./cors');
 
 const Dishes = require('../models/dishes');
