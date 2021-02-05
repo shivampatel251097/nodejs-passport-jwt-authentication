@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 //Passport local mongoose- this bydefault create schema with USER(having fields username, password)
 var passportLocalMongoose = require('passport-local-mongoose');
-//User schema to store in mongoDB
+//User schema to be stored in mongoDB
 var User =  new Schema({
     firstname:{
         type: String,
