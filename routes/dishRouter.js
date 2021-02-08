@@ -163,7 +163,7 @@ dishRouter.route('/:dishId/comments')
 });
 
 
-//Endpoints with id for comments
+//These are Endpoints with id for comments
 dishRouter.route('/:dishId/comments/:commentId')
 .options(cors.corsWithOptions,cors.corsWithOptions, (req,res) =>{ res.sendStatus(200);})
 .get(cors.cors,(req,res,next)=>{
