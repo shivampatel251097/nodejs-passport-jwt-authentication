@@ -1,1 +1,1 @@
-# nodejs-passport-jwt-authentication and
+# nodejs-passport-jwt-authentication
